@@ -1,0 +1,131 @@
+<!DOCTYPE html>
+<br>
+<head>
+    <link rel="stylesheet" href="styles.css" />
+    <link rel="icon" type="image/png" sizes="16x16"  href="https://dt2sdf0db8zob.cloudfront.net/wp-content/uploads/favicon-icons/color/sunny-cloud.png">
+    <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;700&display=swap" rel="stylesheet">
+    <meta name="msapplication-TileColor" content="#ffffff">
+    <meta name="theme-color" content="#ffffff">
+    <meta charset="UTF-8" />
+    <title>Weather forecast</title>
+</head>
+
+<body>
+ <!-- Шапка сайта -->
+ <header>
+    <img src="http://4.bp.blogspot.com/-051lC0Sq6FI/UWZtuZqb6BI/AAAAAAAAZOM/TW20fIwMDnY/s540/AccuWeather+logo+2013.jpg" alt="Логотип сайта" id="logo">
+    <nav>
+        <ul>
+            <li><a href="#main-header">Главная</a></li>
+            <li><a href="#forecast-header">Прогноз</a></li>
+            <li><a href="#contact-button">Контакты</a></li>
+        </ul>
+    </nav>
+</header>
+
+<a href="#forecast-header">В конец страницы</a>
+
+<h1 id="main-header">Информация о погоде</h1>
+<p>
+    <font size="20" color="black" face="Verdana"><b>Прогноз погоды на 30 дней</b></font>
+</p>
+<main>
+<strong>Погода</strong> - <a href="https://ru.wikipedia.org/wiki/%D0%9F%D0%BE%D0%B3%D0%BE%D0%B4%D0%B0">это</a>
+неотъемлемая часть жизни каждого из нас. Каждый выход на улицу сопровождает нас просмотром прогноза погоды на ближайшие
+пару часов. 
+Но порой нам необходимо знать хотя бы примерную погоду на более долгий срок, например перед 
+поездкой на дачу, чтобы взять нужные вещи.
+<section>
+    <h2>Факты о погоде</h2>
+    <!-- Ввод текста с отступами -->
+    <pre>Минимальная температура (в России): -71.4°C (абсолютный минимум в Оймяконе, Якутия, Россия)
+    Максимальная температура (в России): 45.2°C (абсолютный максимум в Южно-Сухокумске, Дагестан, Россия)
+    Информация взята <a href="https://ru.wikipedia.org/wiki/%D0%9A%D0%BB%D0%B8%D0%BC%D0%B0%D1%82_%D0%A0%D0%BE%D1%81%D1%81%D0%B8%D0%B8">здесь (Таблица №2)</a>
+    </pre>
+    <!-- Текст с форматированием -->
+    <blockquote cite="https://ru.wikipedia.org/wiki/Погода">
+        Погода может меняться в зависимости от географического положения, времени года и других факторов.
+    </blockquote>
+</section>
+
+<p><i>Прогноз погоды</i> может включать температуру, ветер, влажность и <u>осадки</u>. Для более точных данных используются спутниковые и наземные наблюдения.</p>
+
+<p>Существует множество систем измерения: в России используется Цельсий (<abbr title="Градусы Цельсия">°C</abbr>), а в США - Фаренгейт (<abbr title="Градусы Фаренгейта">°F</abbr>).</p>
+</main>
+<figure>
+    <img src="https://external-content.duckduckgo.com/iu/?u=http%3A%2F%2Fneizvestniy-geniy.ru%2Fimages%2Fworks%2Fphoto%2F2015%2F07%2F1431877_1.jpg&f=1&nofb=1&ipt=ea8391fab5b6740b502d73f9c74d24876e3f1c7a2b23e535f31ead0240a1c2a7&ipo=images"
+        alt="Солнечная погода">
+</figure>
+
+<h2 id="forecast-header">Прогноз на 30 дней</h2>
+    <form id="weather-form">
+        <label for="country">Выберите страну:</label>
+        <input type="text" id="country" name="country" required>
+        <label for="city">Выберите город:</label>
+        <input type="text" id="city" name="city" required>
+        <button type="submit">Получить прогноз</button>
+    </form>
+    <div id="weather-forecast" class="hidden">
+        <h3>Прогноз на 30 дней</h3>
+        <ul id="forecast-list"></ul>
+    </div>
+
+    <!-- Упорядоченный список с вложенным маркированным -->
+    <h3>Основные параметры прогноза</h3>
+    <ol type="I" start="2">
+        <li>Температура:
+            <ul>
+                <li>Минимальная</li>
+                <li>Максимальная</li>
+            </ul>
+        </li>
+        <li>Скорость ветра</li>
+        <li>Влажность</li>
+    </ol>
+
+    <!-- Список описаний -->
+    <dl>
+        <dt><strong>Температура</strong></dt>
+        <dd>Мера теплового состояния воздуха.</dd>
+        <dd>Измеряется в градусах Цельсия или Фаренгейта.<br></dd>
+
+        <dt><strong>Ветер</strong></dt>
+        <dd>Движение воздуха относительно земной поверхности.<br></dd>
+
+        <dt><strong>Влажность</strong></dt>
+        <dd>Количество водяного пара в воздухе.<br></dd>
+
+        <dt><strong>Осадки</strong></dt>
+        <dd>Жидкие или твердые частицы, выпадающие из атмосферы.<br></dd>
+
+        <dt><strong>Атмосферное давление</strong></dt>
+        <dd>Сила, с которой атмосфера давит на поверхность земли.</dd>
+    </dl>
+
+ <!-- Боковая панель -->
+<aside>
+    <h3>Полезные ссылки</h3>
+    <ul>
+        <li><a href="https://www.gismeteo.ru" target="_blank">Gismeteo</a></li>
+        <li><a href="https://www.accuweather.com" target="_blank">AccuWeather</a></li>
+        <li><a href="https://weather.com" target="_blank">Weather.com</a></li>
+    </ul>
+</aside>
+
+<div class="header"></div>
+<div class="main"></div>
+<div class="footer">
+    <!-- Якорь на подзаголовок -->
+    <a href="#main-header">В начало страницы</a>
+    <footer>
+        <p>© 2024 Все права защищены</p>
+        <address>
+            Разработчик: Никита Михеев<br>
+            Email: <a href="mail: 89999177553@mail.ru">89999177553@mail.ru</a><br>
+            Телефон: <a href="phone number: +7 999 917 75 53">+7 999 917 75 53</a>
+        </address>
+    </footer>
+</div>
+
+</body>
+</html>

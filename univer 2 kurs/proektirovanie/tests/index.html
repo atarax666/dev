@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Погода</title>
+    <!-- Подключение CSS -->
+    <link rel="stylesheet" href="css/styles.css">
+    <!-- Фавиконка -->
+    <link rel="icon" href="images/favicon.ico" type="image/x-icon">
+</head>
+<body>
+    <!-- Заголовок страницы -->
+    <h1 id="main-header">Прогноз погоды</h1>
+
+    <!-- Описание погоды с ссылкой на Википедию -->
+    <p>
+        Погода — это совокупность метеорологических условий, таких как температура, влажность, ветер и осадки, которые происходят в атмосфере в определенное время и в определенном месте. Подробнее о погоде можно узнать на 
+        <a href="https://ru.wikipedia.org/wiki/Погода" target="_blank">Википедии</a>.
+    </p>
+
+    <!-- Форма для выбора страны и города -->
+    <h2>Прогноз погоды на 30 дней</h2>
+    <form id="weather-form">
+        <label for="country">Выберите страну:</label>
+        <input type="text" id="country" name="country" required>
+        <label for="city">Выберите город:</label>
+        <input type="text" id="city" name="city" required>
+        <button type="submit">Получить прогноз</button>
+    </form>
+
+    <!-- Отображение прогноза погоды -->
+    <div id="weather-forecast" class="hidden">
+        <h3>Прогноз на 30 дней</h3>
+        <ul id="forecast-list"></ul>
+    </div>
+
+
+    <!-- Кнопка для показа случайной цитаты Джейсона Стетхема -->
+    <button id="statham-quote-button">Случайная цитата Джейсона Стетхема</button>
+    <p id="statham-quote" class="hidden"></p>
+
+    <!-- Кнопка для показа сообщения про хомяка -->
+    <button id="hamster-button">Рефка на хомяка</button>
+    <p id="hamster-message" class="hidden"></p>
+
+    <!-- Кнопка для показа контактной информации -->
+    <button id="contact-button">Контакты</button>
+    <div id="contact-info" class="hidden">
+        <p>Email: 89999177553@mail.ru</p>
+        <p>Телефон: +7 999 917 7553</p>
+    </div>
+
+    <!-- Подключение JavaScript -->
+    <script src="js/script.js"></script>
+</body>
+</html>

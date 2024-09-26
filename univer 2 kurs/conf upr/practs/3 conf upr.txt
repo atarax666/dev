@@ -1,0 +1,23 @@
+2 практика
+1) pip show matplotlib
+2) npm show express
+3) digraph express_dependencies {
+  "express" -> "accepts"
+  "express" -> "array-flatten"
+  "express" -> "body-parser"
+  "express" -> "cookie-parser"
+  "express" -> "debug"
+}
+digraph matplotlib_dependencies {
+  "contourpy" -> "numpy"
+  "matplotlib" -> "contourpy"
+  "matplotlib" -> "cycler"
+  "matplotlib" -> "fonttools"
+  "matplotlib" -> "kiwisolver"
+  "matplotlib" -> "numpy"
+  "matplotlib" -> "packaging"
+  "matplotlib" -> "pillow"
+  "matplotlib" -> "pyparsing"
+  "matplotlib" -> "python-dateutil"
+  "python-dateutil" -> "six"
+}

@@ -1,0 +1,4 @@
+1) cat passwd | cut -f1 -d: | sort
+1.1) grep '^[^#]' /etc/passwd | cut -d: -f1 | sort
+2) cat /etc/protocols | awk '{print $2, $1}' | sort -nr | head -n 5
+3) 

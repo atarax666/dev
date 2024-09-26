@@ -1,0 +1,115 @@
+/* Общие стили */
+body {
+  font-family: 'Roboto', sans-serif;
+  margin: 0;
+  padding: 0;
+}
+
+/* Шапка сайта с position: fixed для навигации и absolute для логотипа */
+header {
+  background-color: #333;
+  color: white;
+  position: fixed;
+  width: 100%;
+  top: 0;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 20px;
+}
+
+#logo {
+  position: absolute;
+  top: 10px;
+  left: 20px;
+  width: 80px;
+  height: 80px;
+}
+
+nav ul {
+  list-style: none;
+  margin: 0;
+  padding: 0;
+  display: flex;
+  gap: 20px;
+}
+
+nav ul li {
+  display: inline;
+}
+
+nav ul li a {
+  color: white;
+  text-decoration: none;
+  padding: 10px;
+}
+
+nav ul li a:hover {
+  text-decoration: underline;
+}
+
+nav ul li a:visited {
+  color: #ccc;
+}
+
+/* Основной контент с отступами */
+main {
+  padding: 120px 20px;
+}
+
+/* Секция с float для обтекания */
+.float-section {
+  float: left;
+  width: 40%;
+  margin-right: 20px;
+}
+
+blockquote {
+  float: right;
+  width: 50%;
+}
+
+/* Боковая панель с float */
+aside {
+  float: right;
+  background-color: #f1f1f1;
+  padding: 20px;
+  width: 30%;
+  margin: 20px;
+}
+
+/* Подвал */
+footer {
+  background-color: #333;
+  color: white;
+  text-align: center;
+  padding: 20px;
+  clear: both;
+}
+
+/* Кнопки и контакты */
+#contact-info.hidden {
+  display: none;
+}
+
+/* Стили для кнопок */
+button {
+  margin-top: 10px;
+  padding: 10px 20px;
+  font-size: 16px;
+  cursor: pointer;
+}
+
+button:hover {
+  background-color: #555;
+  color: white;
+}
+
+/* Применение position: sticky */
+#weather-form {
+  position: sticky;
+  top: 20px;
+  background-color: #eaeaea;
+  padding: 20px;
+  margin-bottom: 20px;
+}

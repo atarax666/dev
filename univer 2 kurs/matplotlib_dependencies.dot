@@ -1,0 +1,27 @@
+digraph matplotlib_dependencies {
+  graph [splines=true, overlap=false, rankdir=LR];
+  node [shape=circle, style=filled, color=lightblue];
+  "matplotlib" [style=bold, color=lightgreen];
+  "matplotlib" -> "numpy" [dir=none];
+  "numpy" [color=lightcoral];
+  "matplotlib" -> "contourpy" [dir=none];
+  "contourpy" [color=lightcoral];
+  "matplotlib" -> "cycler" [dir=none];
+  "cycler" [color=lightcoral];
+  "matplotlib" -> "fonttools" [dir=none];
+  "fonttools" [color=lightcoral];
+  "matplotlib" -> "kiwisolver" [dir=none];
+  "kiwisolver" [color=lightcoral];
+  "matplotlib" -> "numpy" [dir=none];
+  "numpy" [color=lightcoral];
+  "matplotlib" -> "packaging" [dir=none];
+  "packaging" [color=lightcoral];
+  "matplotlib" -> "pillow" [dir=none];
+  "pillow" [color=lightcoral];
+  "matplotlib" -> "pyparsing" [dir=none];
+  "pyparsing" [color=lightcoral];
+  "matplotlib" -> "python-dateutil" [dir=none];
+  "python-dateutil" [color=lightcoral];
+  "matplotlib" -> "six" [dir=none];
+  "six" [color=lightcoral];
+}

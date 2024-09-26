@@ -1,0 +1,314 @@
+// КОД ЗАДАНИЯ 5.1 задание 1
+
+//#include <iostream>
+//
+//using namespace std;
+//
+//int main()
+//{
+//    setlocale(LC_ALL, "Russian");
+//    using namespace std;
+//    int x, s, e;
+//    cout << "Введите число: ";
+//    cin >> x;
+//    cout << endl;
+//    cout << "Какой бит нужно заменить: ";
+//    cin >> s;
+//    cout << endl;
+//    cout << "На что нужно заменить бит(1 | 0): ";
+//    cin >> e;
+//    cout << endl;
+//
+//    if ((x <= 255) and (x >= 0) and (s >= 0) and (s <= 8)) 
+//    {
+//        unsigned char c = x; // Число в 2-ой форме
+//        unsigned char maska = 1; // 00000001, маска для числа
+//
+//        // Сдвигаем маску на s - 1 бита влево, чтобы она оказалась на нужном бите
+//        unsigned char bit_mask = maska << (s - 1); // смещение бита для замены его на 0
+//        unsigned char bit_mask_2 = maska << (s - 1); // смещение бита для замены его на 1
+//
+//        // Инвертируем маску, чтобы все биты, кроме s-ого, были единицами
+//        bit_mask = ~bit_mask; // 11101111(пример)
+//
+//        // Применяем маску к x с помощью побитовой операции И / ИЛИ
+//        if (e == 1) {
+//            x = x | bit_mask_2; // замена биты в исходном числе для 1
+//        }
+//        else {
+//            x = x & bit_mask; // замена биты в исходном числе для 0
+//        }
+//
+//        cout << "Результат: " << static_cast<int>(x) << std::endl; // Выводим результат
+//
+//        return 0;
+//    }
+//    else {
+//        cout << "Введеное число превышает допустимый предел" << endl;
+//    }
+//}
+
+//#include <cstdlib>
+//#include <iostream>
+//#include <Windows.h>
+//#include <bitset>
+//using namespace std;
+//
+//int main()
+//{
+//	SetConsoleCP(1251);
+//	SetConsoleOutputCP(1251);
+//
+//	unsigned int x = 25;
+//	const int n = sizeof(int) * 8;
+//	unsigned maska = (1 << n - 1);
+//	cout << "Начальный вид маски: " << bitset<n>(maska) << endl;
+//	cout << "Результат: ";
+//	for (int i = 1; i <= n; i++) {
+//		cout << ((x & maska) >> (n - i));
+//		maska = maska >> 1;
+//	}
+//	cout << endl;
+//	system("pause");
+//	return 0;
+//}
+
+// Задание 2
+
+// Задание 2.а мое исполнение
+
+/*#include <iostream>
+#include <vector>
+using namespace std;
+
+int main()
+{
+ setlocale(LC_ALL, "Russian");
+ vector<int> numbers;
+ vector<int> sorted;
+ int x, y;
+ int z = 0;
+
+ cout << "Введите количество элементов: ";
+ cin >> x;
+ cout << endl;
+ for (int i = 1; i <= x; i++) { // Запись введеных элементов в вектор
+  cout << "Введите элемент: ";
+  cin >> y;
+  cout << endl;
+  numbers.push_back(y);
+ }
+ y = *max_element(begin(numbers), end(numbers));// поиск максимального значения в векторе
+ for (int i = 0; i <= y; i++) { // сортировка через перебор чисел от 0 до Y и find
+  if (find(numbers.begin(), numbers.end(), i) != numbers.end()) {
+   sorted.push_back(1);
+  }
+  else {
+   sorted.push_back(0);
+  }
+ }
+ cout << "Отсортированный список: ";
+ for (int i : sorted) { // вывод отсортированного битового массива
+  if (i == 1) {
+   cout << z << " ";
+  }
+  z += 1;
+ }
+}*/
+
+
+// Задание 2.а ЧАТ ГПТ
+
+//#include <iostream>
+//using namespace std;
+//
+//int main() {
+//	setlocale(LC_ALL, "Russian");
+//	unsigned char bitArray = 0;  // Битовый массив (8 бит) для чисел от 0 до 7
+//	int n;  // Количество чисел в последовательности
+//
+//	cout << "Введите количество чисел (не более 8): ";
+//	cin >> n;
+//
+//	if (n > 8) {
+//		cout << "Число элементов не должно превышать 8." << endl;
+//		return 1;
+//	}
+//
+//	cout << "Введите " << n << " чисел (от 0 до 7): " << endl;
+//	for (int i = 0; i < n; ++i) {
+//		int num;
+//		cin >> num;
+//
+//		if (num < 0 || num > 7) {
+//			cout << "Число должно быть в диапазоне от 0 до 7." << std::endl;
+//			return 1;
+//		}
+//
+//		// Устанавливаем соответствующий бит в битовом массиве
+//		bitArray |= (1 << num);
+//	}
+//
+//	cout << "Отсортированная последовательность: ";
+//
+//	// Проходим по всем битам от 0 до 7 и выводим индексы единичных битов
+//	for (int i = 0; i < 8; ++i) {
+//		if (bitArray & (1 << i)) {  // Проверяем, установлен ли i-й бит
+//			cout << i << " ";
+//		}
+//	}
+//
+//	cout << std::endl;
+//
+//	return 0;
+//}
+
+
+// Здание 2.Б ЧАТ ГПТ
+
+//#include <iostream>
+//using namespace std;
+//
+//int main() {
+//	setlocale(LC_ALL, "Russian");
+//	unsigned long long bitArray = 0;  // Битовый массив (64 бита) для чисел от 0 до 63
+//	int n;  // Количество чисел в последовательности
+//
+//	cout << "Введите количество чисел (не более 64): ";
+//	cin >> n;
+//
+//	if (n > 64) {
+//		cout << "Число элементов не должно превышать 64." << endl;
+//		return 1;
+//	}
+//
+//	cout << "Введите " << n << " чисел (от 0 до 63): " << endl;
+//	for (int i = 0; i < n; ++i) {
+//		int num;
+//		cin >> num;
+//
+//		if (num < 0 || num > 63) {
+//			cout << "Число должно быть в диапазоне от 0 до 63." << endl;
+//			return 1;
+//		}
+//
+//		// Устанавливаем соответствующий бит в битовом массиве
+//		bitArray |= (1ULL << num);
+//	}
+//
+//	cout << "Отсортированная последовательность: ";
+//
+//	// Проходим по всем битам от 0 до 63 и выводим индексы единичных битов
+//	for (int i = 0; i < 64; ++i) {
+//		if (bitArray & (1ULL << i)) {  // Проверяем, установлен ли i-й бит
+//			cout << i << " ";
+//		}
+//	}
+//
+//	cout << endl;
+//
+//	return 0;
+//}
+
+// Задане 2.в ЧАТ ГПТ
+//#include <iostream>
+//using namespace std;
+//
+//int main() {
+//	setlocale(LC_ALL, "Russian");
+//	unsigned char bitArray[8] = { 0 };  // Массив из 8 байтов для хранения битов (64 бита)
+//	int n;  // Количество чисел в последовательности
+//
+//	cout << "Введите количество чисел (не более 64): ";
+//	cin >> n;
+//
+//	if (n > 64) {
+//		cout << "Число элементов не должно превышать 64." << endl;
+//		return 1;
+//	}
+//
+//	cout << "Введите " << n << " чисел (от 0 до 63): " << endl;
+//	for (int i = 0; i < n; ++i) {
+//		int num;
+//		cin >> num;
+//
+//		if (num < 0 || num > 63) {
+//			cout << "Число должно быть в диапазоне от 0 до 63." << endl;
+//			return 1;
+//		}
+//
+//		// Определяем индекс байта и смещение бита в байте
+//		int byteIndex = num / 8;  // Номер байта
+//		int bitIndex = num % 8;   // Номер бита в этом байте
+//
+//		// Устанавливаем соответствующий бит в массиве
+//		bitArray[byteIndex] |= (1 << bitIndex);
+//	}
+//
+//	cout << "Отсортированная последовательность: ";
+//
+//	// Проходим по всем битам от 0 до 63 и выводим индексы единичных битов
+//	for (int i = 0; i < 64; ++i) {
+//		int byteIndex = i / 8;  // Номер байта
+//		int bitIndex = i % 8;   // Номер бита в этом байте
+//
+//		// Проверяем, установлен ли i-й бит
+//		if (bitArray[byteIndex] & (1 << bitIndex)) {
+//			cout << i << " ";
+//		}
+//	}
+//
+//	cout << endl;
+//
+//	return 0;
+//}
+
+
+// Задание 3 3.а
+//#include <iostream>
+//#include <fstream>
+//#include <string>
+//#include <chrono>
+//#include <bitset>
+//#include <vector>
+//
+//using namespace std;
+//
+//int main() {
+//    const int MAX_NUM = 10000000; // Максимальное количество чисел
+//
+//    setlocale(LC_ALL, "Russian");
+//    auto start = chrono::high_resolution_clock::now(); // Время начала отсчета
+//
+//    // Используем динамическое выделение памяти для битового массива
+//    bitset<MAX_NUM + 1>* bitArray = new bitset<MAX_NUM + 1>(); // Битовый массив в куче
+//
+//    ifstream file("C:/Users/dimap/OneDrive/Рабочий стол/prem.txt");
+//    if (!file.is_open()) {
+//        cerr << "Не удалось открыть файл" << endl;
+//        return 1;
+//    }
+//
+//    int number;
+//    while (file >> number) {
+//        if (number >= 0 && number <= MAX_NUM) {
+//            bitArray->set(number); // Устанавливаем бит, если число в допустимом диапазоне
+//        }
+//    }
+//    file.close();
+//
+//    for (int i = 0; i <= MAX_NUM; ++i) {
+//        if (bitArray->test(i)) { // Проверяем, установлен ли бит
+//            cout << i << '\n'; // Если установлен, выводим число
+//        }
+//    }
+//
+//    delete bitArray; // Освобождаем динамическую память
+//
+//    auto end = chrono::high_resolution_clock::now(); // Время окончания отчета
+//    chrono::duration<double> duration = end - start;
+//    cout << "Время выполнения: " << duration.count() << " секунд" << endl; // Вывод времени работы программы
+//
+//    return 0;
+//}
+
