@@ -22,8 +22,8 @@ header {
   position: absolute;
   top: 10px;
   left: 20px;
-  width: 80px;
-  height: 80px;
+  width: 70px;
+  height: 50px;
 }
 
 nav ul {
@@ -112,4 +112,67 @@ button:hover {
   background-color: #eaeaea;
   padding: 20px;
   margin-bottom: 20px;
+}
+
+/* Общие стили */
+body {
+  font-family: 'Roboto', sans-serif;
+  margin: 0;
+  padding: 0;
+}
+
+/* Стили для формы */
+form {
+  background-color: #f9f9f9;
+  padding: 20px;
+  border-radius: 5px;
+  border: 1px solid #ccc;
+  margin-bottom: 20px;
+}
+
+fieldset {
+  border: 1px solid #ccc;
+  padding: 15px;
+  margin-bottom: 20px;
+}
+
+legend {
+  font-size: 1.2em;
+  font-weight: bold;
+}
+
+/* Стили для элементов input */
+input, textarea, select, button {
+  width: 100%;
+  padding: 10px;
+  margin-top: 5px;
+  margin-bottom: 10px;
+  border: 1px solid #ccc;
+  border-radius: 5px;
+}
+
+/* Стили для фокуса на элементах формы */
+input:focus, textarea:focus, select:focus {
+  border-color: #00f;
+  outline: none;
+}
+
+/* Стили для псевдоэлемента ::placeholder */
+input::placeholder, textarea::placeholder {
+  color: #999;
+  font-style: italic;
+}
+
+/* Стили для кнопки */
+button {
+  background-color: #4CAF50;
+  color: white;
+  border: none;
+  padding: 10px;
+  cursor: pointer;
+  border-radius: 5px;
+}
+
+button:hover {
+  background-color: #45a049;
 }
