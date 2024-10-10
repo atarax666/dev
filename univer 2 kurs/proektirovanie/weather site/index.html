@@ -1,0 +1,131 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Прогноз погоды</title>
+    <link rel="icon" href="https://dt2sdf0db8zob.cloudfront.net/wp-content/uploads/favicon-icons/color/sunny-cloud.png" type="image/x-icon">
+    <link rel="stylesheet" href="style.css">
+</head>
+
+<header>
+    <nav>
+        <ul>
+            <li><a href="#home">Главная</a></li>
+            <li><a href="#forecast">Прогноз</a></li>
+            <li><a href="#contact">Контакты</a></li>
+        </ul>
+    </nav>
+    <img src="https://is1-ssl.mzstatic.com/image/thumb/Purple124/v4/61/0b/3f/610b3f26-dbab-f28d-b933-effa9f44f745/App_Icon_-_Small-marketing.lsr/600x600bb.jpg " alt="Лого сайта" width="200" height="100">
+</header>
+
+<main>
+    <!-- Секции с заголовками -->
+    <section id="home">
+        <h2>Главная</h2>
+        <p>Добро пожаловать на наш сайт прогноза погоды.</p>
+    </section>
+    <section id="forecast">
+        <h2>Прогноз погоды</h2>
+        <p>Здесь вы найдёте точный прогноз на каждый день.</p>
+    </section>
+    <aside>
+        <p>Реклама или полезная информация сбоку.</p>
+    </aside>
+    <article>
+        <h3>Прогноз по регионам</h3>
+        <p>Прогноз погоды для разных городов России.</p>
+    </article>
+</main>
+
+<body>
+    
+    <form method="POST">
+        <fieldset>
+            <legend>Регистрация</legend>
+            <label for="username">Имя пользователя:</label>
+            <input type="text" id="username" name="username" required>
+            
+            <label for="email">Email:</label>
+            <input type="email" id="email" name="email" required>
+    
+            <label for="tel">Телефон:</label>
+            <input type="tel" id="tel" name="tel" pattern="[0-9]{3}-[0-9]{3}-[0-9]{4}" placeholder="123-456-7890" required>
+    
+            <label for="password">Пароль:</label>
+            <input type="password" id="password" name="password" required>
+    
+            <button type="submit">Зарегистрироваться</button>
+        </fieldset>
+    </form>    
+
+    <!-- Основной заголовок страницы
+    <h1>Прогноз погоды на неделю</h1>
+
+    <Описание текущей погоды -->
+    <section>
+        <h2>Погода сегодня</h2>
+        <p><strong>Температура:</strong> <em>15°C</em><br>
+        <b>Осадки:</b> <u>ожидаются дожди</u></p>
+        <blockquote>Совет: захватите с собой зонт!</blockquote>
+    </section>
+
+    <div id="weather">
+        <h2>Текущая погода</h2>
+        <p id="location"></p>
+        <p id="temperature"></p>
+        <p id="description"></p>
+    </div>
+
+    <!-- Прогноз на неделю -->
+    <section>
+        <h3>Прогноз на неделю:</h3>
+        <ol type="I" start="3">
+            <li>Вторник: <strong>Облачно</strong></li>
+            <li>Среда: <i>Солнечно</i></li>
+            <li>Четверг:
+                <ul>
+                    <li>Дождь утром</li>
+                    <li>Ясно вечером</li>
+                </ul>
+            </li>
+        </ol>
+    </section> 
+
+    <!-- Список описаний -->
+    <dl>
+        <dt>Температура</dt>
+        <dd>Показатель тепла или холода</dd>
+        <dd>Может варьироваться от -50 до +50°C</dd>
+        <dt>Дождь</dt>
+        <dd>Осадки в виде капель воды</dd>
+        <dt>Солнечно</dt>
+        <dd>Состояние погоды без облаков</dd>
+    </dl>
+
+    <!-- Ссылка на внешний ресурс -->
+    <p>Для подробного прогноза посетите <a href="https://www.gismeteo.ru" target="_blank">Gismeteo</a>.</p>
+
+    <!-- Контакты -->
+    <footer>
+        <a href="tel:+1234567890">Позвоните нам</a> или <a href="mailto:info@weather.com">отправьте email</a>
+    </footer>
+
+    <!-- Изображение-ссылка -->
+    <p>
+        <a href="https://www.gismeteo.ru" target="_blank">
+            <img src="weather-image.jpg" alt="Прогноз погоды" width="200" height="100">
+        </a>
+    </p>
+
+    <!-- Якорь на разделы -->
+    <p><a href="#top">Наверх</a></p>
+</body>
+
+<footer>
+    <address>
+        Контактная информация: <a href="mailto:info@weather.com">info@weather.com</a>
+    </address>
+</footer>
+
+</html>

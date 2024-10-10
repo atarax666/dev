@@ -1,0 +1,55 @@
+/* Шапка и меню навигации */
+header {
+    position: sticky;
+    top: 0;
+    background-color: #f0f0f0;
+}
+
+nav ul {
+    display: flex;
+    justify-content: space-around;
+}
+
+nav ul li {
+    list-style: none;
+}
+
+nav a:hover {
+    color: blue;
+}
+
+/* Боковая панель (aside) */
+aside {
+    float: right;
+    width: 20%;
+}
+
+/* Основной контент */
+main {
+    display: flex;
+    flex-direction: column;
+}
+
+/* Секционный контент */
+section {
+    position: relative;
+    padding: 20px;
+    border: 1px solid black;
+    margin-bottom: 10px;
+}
+
+/* Статья (article) */
+article {
+    position: absolute;
+    left: 0;
+    top: 300px;
+}
+
+#weather {
+    border: 1px solid #ddd;
+    padding: 10px;
+    width: 300px;
+    margin: 20px auto;
+    text-align: center;
+    font-family: Arial, sans-serif;
+}
