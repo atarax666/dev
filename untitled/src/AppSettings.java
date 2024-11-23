@@ -44,10 +44,19 @@ public class AppSettings {
             AppSettings settings = AppSettings.getInstance();
             // Получаем имя текущего потока
             String threadName = Thread.currentThread().getName();
-            // Устанавливаем настройку с указанием темы и имени потока
-            settings.setSetting("theme", "тёмная тема (" + threadName + ")");
-            // Выводим сообщение, какая тема была установлена этим потоком
-            System.out.println(threadName + " установил тему: " + settings.getSetting("theme"));
+            // Определяем тему в зависимости от имени потока
+            String theme;
+            if (threadName.equals("Поток-1")) {
+                theme = "светлая тема";
+            } else if (threadName.equals("Поток-2")) {
+                theme = "тёмная тема";
+            } else {
+                theme = "звёздная тема";
+            }
+            // Устанавливаем тему для текущего потока
+            settings.setSetting("theme-" + threadName, theme);
+            // Выводим сообщение, какую тему установил этот поток
+            System.out.println(threadName + " установил " + theme);
         };
 
         // Создаём три потока, которые будут выполнять задачу
@@ -69,8 +78,11 @@ public class AppSettings {
             e.printStackTrace();
         }
 
-        // Проверяем итоговое значение настройки
+        // Проверяем, какие темы были установлены для каждого потока
         AppSettings settings = AppSettings.getInstance();
-        System.out.println("Финальная тема: " + settings.getSetting("theme"));
+        System.out.println("Финальная тема для Поток-1: " + settings.getSetting("theme-Поток-1"));
+        System.out.println("Финальная тема для Поток-2: " + settings.getSetting("theme-Поток-2"));
+        System.out.println("Финальная тема для Поток-3: " + settings.getSetting("theme-Поток-3"));
     }
 }
+
